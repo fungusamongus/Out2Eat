@@ -22,6 +22,7 @@
         "watch:less": "nodemon -w . -e less -x npm run less",
         "watch": "npm run watch:less & npm run watch:typescript",
         "ts": "npm run tsc:init && tsc -p .",
+        "tsc:init": "tsc --init -t 'ES5' --preserveConstEnums --removeComments -w  --noImplicitAny --outDir '.'",
         "watch:typescript": "npm run ts -- -w",
         "tsd": "tsd update -so && tsd link",
         "start": "node ./node_modules/http-server/bin/http-server app"
