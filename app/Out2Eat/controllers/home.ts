@@ -1,7 +1,7 @@
 module Out2Eat {
 	class HomeController {
-		static $inject = []
-			constructor() {
+		static $inject = ["LocateService"];
+			constructor(private locate: LocateService) {
 				
 			}
 	}

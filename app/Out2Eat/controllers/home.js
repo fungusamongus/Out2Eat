@@ -1,9 +1,10 @@
 var Out2Eat;
 (function (Out2Eat) {
     var HomeController = (function () {
-        function HomeController() {
+        function HomeController(locate) {
+            this.locate = locate;
         }
-        HomeController.$inject = [];
+        HomeController.$inject = ["LocateService"];
         return HomeController;
     })();
     angular

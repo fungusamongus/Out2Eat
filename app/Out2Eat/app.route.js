@@ -4,7 +4,7 @@ var Out2Eat;
     function routes($routeProvider) {
         $routeProvider
             .when("/", {
-            templateUrl: "./views/home.html",
+            templateUrl: "Out2Eat/views/home.html",
             controller: "HomeController",
             controllerAs: "vm"
         });

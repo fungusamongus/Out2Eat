@@ -4,7 +4,7 @@ module Out2Eat{
 	function routes($routeProvider: ng.route.IRouteProvider) {
 		$routeProvider
 			.when("/", {
-				templateUrl: "./views/home.html",
+				templateUrl: "Out2Eat/views/home.html",
 				controller: "HomeController",
 				controllerAs: "vm"
 			})
