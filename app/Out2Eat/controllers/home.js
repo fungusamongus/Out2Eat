@@ -1,10 +1,19 @@
 var Out2Eat;
 (function (Out2Eat) {
     var HomeController = (function () {
-        function HomeController(locate) {
-            this.locate = locate;
+        function HomeController(LocateService, RestaurantService) {
+            this.LocateService = LocateService;
+            this.RestaurantService = RestaurantService;
         }
-        HomeController.$inject = ["LocateService"];
+        HomeController.prototype.findMe = function () {
+            console.log("clicked");
+            this.LocateService.currentLocation();
+        };
+        HomeController.prototype.findFood = function () {
+            console.log("clacked");
+            this.RestaurantService.listRestaurants();
+        };
+        HomeController.$inject = ["LocateService", "RestaurantService"];
         return HomeController;
     })();
     angular
