@@ -1,0 +1,85 @@
+@font-face {
+  font-family: Diner;
+  src: url('../Diner/diner.ttf');
+}
+* {
+  background-color: #fcfae1;
+}
+img {
+  width: 160%;
+}
+.background {
+  position: absolute;
+  opacity: .04;
+}
+.swatch {
+  width: 100%;
+  margin: auto;
+}
+.box-one {
+  width: 6em;
+  height: 4em;
+  background-color: #b9121b;
+  float: left;
+  margin-left: 30%;
+  margin-bottom: 2em;
+}
+.box-two {
+  width: 6em;
+  height: 4em;
+  background-color: #4c1b1b;
+  float: left;
+}
+.box-three {
+  width: 6em;
+  height: 4em;
+  background-color: #f6e497;
+  float: left;
+}
+.box-four {
+  width: 6em;
+  height: 4em;
+  background-color: #4c1b1b;
+  float: left;
+}
+.box-five {
+  width: 6em;
+  height: 4em;
+  background-color: #bd8d48;
+  float: left;
+}
+h1 {
+  font-family: Diner;
+  font-size: 6em;
+  text-align: center;
+  margin: 5em .4em 0 0;
+  clear: left;
+  color: #b9121b;
+}
+h4 {
+  font-family: Georgia;
+  font-size: 2em;
+  text-align: center;
+  margin: .2em 0 .3em 0;
+  color: #4c1b1b;
+}
+p {
+  text-align: center;
+  font-size: 2em;
+  color: red;
+}
+.button-box {
+  width: 100%;
+  margin-top: 4em;
+}
+button {
+  width: 20%;
+  height: 4em;
+  background-color: #f6e497;
+  border-radius: .4em;
+  color: #4c1b1b;
+  margin: 0 40% 0 40%;
+  font-family: Georgia;
+  font-size: 2em;
+  border: 4px solid #bd8d48;
+}
