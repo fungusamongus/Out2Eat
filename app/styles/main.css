@@ -5,6 +5,9 @@
 * {
   background-color: #fcfae1;
 }
+.container {
+  background-image: "../Images/TransparentChart.gif";
+}
 img {
   width: 160%;
 }
@@ -17,7 +20,7 @@ img {
   margin: auto;
 }
 .box-one {
-  width: 6em;
+  width: 8%;
   height: 4em;
   background-color: #b9121b;
   float: left;
@@ -25,25 +28,25 @@ img {
   margin-bottom: 2em;
 }
 .box-two {
-  width: 6em;
+  width: 8%;
   height: 4em;
   background-color: #4c1b1b;
   float: left;
 }
 .box-three {
-  width: 6em;
+  width: 8%;
   height: 4em;
   background-color: #f6e497;
   float: left;
 }
 .box-four {
-  width: 6em;
+  width: 8%;
   height: 4em;
   background-color: #4c1b1b;
   float: left;
 }
 .box-five {
-  width: 6em;
+  width: 8%;
   height: 4em;
   background-color: #bd8d48;
   float: left;
