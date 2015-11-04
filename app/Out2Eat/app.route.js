@@ -1,15 +1,15 @@
 var Out2Eat;
 (function (Out2Eat) {
     "use strict";
+    routes.$inject = ["$routeProvider"];
     function routes($routeProvider) {
         $routeProvider
             .when("/", {
             templateUrl: "Out2Eat/views/home.html",
             controller: "HomeController",
-            controllerAs: "vm"
+            controllerAs: "home"
         });
     }
-    routes.$inject = ["$routeProvider"];
     angular
         .module("Out2Eat")
         .config(routes);
