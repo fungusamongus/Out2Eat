@@ -2,8 +2,8 @@
   font-family: Diner;
   src: url('../Diner/diner.ttf');
 }
-* {
-  background-color: #fcfae1;
+.container {
+  background-image: url('../Images/TransparentChart2.jpg');
 }
 .swatch {
   width: 100%;
