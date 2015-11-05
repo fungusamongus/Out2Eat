@@ -5,30 +5,6 @@
 * {
   background-color: #fcfae1;
 }
-.container {
-  position: relative;
-  overflow: hidden;
-}
-/* You could use :after - it doesn't really matter */
-.container:before {
-  content: ' ';
-  display: block;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 80%;
-  z-index: 0;
-  opacity: 0.04;
-  background-image: url('../Images/TransparentChart.gif');
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  -ms-background-size: cover;
-  -o-background-size: cover;
-  -moz-background-size: cover;
-  -webkit-background-size: cover;
-  background-size: cover;
-}
 img {
   width: 160%;
 }
