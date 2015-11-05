@@ -13,13 +13,16 @@
 		<h4>Pick a distance.</h4><h4>Press the button.</h4><h4>Try the Restaurant.</h4>
 	</div>
 	<p>(Here be a slider, arrrr)</p>
-<<<<<<< HEAD
+	<div id="slider">
+		<input class="bar" type="range" id="rangeinput" value="50" onchange="rangevalue.value=value"/>
+		<span class="highlight"></span>
+		<output id="rangevalue">50</output>
+	</div>
 	<div  class="button-box">
 		<button ng-click="home.findFood()">Press Me for Adventure</button>
-=======
 	<div ng-click="home.findFood()" class="button-box">
 		<button>Press Me for Adventure</button>
->>>>>>> c1a50c13811f500e89dcdfb2c8c688cc7027b731
 	</div>
 </div>
+
 
