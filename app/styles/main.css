@@ -85,3 +85,7 @@ button {
     font-size: .8em;
   }
 }
+button:hover {
+  background-color: #4c1b1b;
+  color: #f6e497;
+}
