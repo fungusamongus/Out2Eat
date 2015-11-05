@@ -1,5 +1,4 @@
 
-
 var request_data = {
 	url: 'http://localhost:1234/search?term=food&location=San+Francisco',
 	method: 'GET'
@@ -9,7 +8,7 @@ var request_data = {
 module Out2Eat{
 	export class RestaurantService{
 		static $inject =["$http", "LocateService"];
-		constructor(private $http, private LoacateService){
+		constructor(private $http, private LocateService){
 			
 		}
 		//Call to Yelp API for restaurant data based on location

@@ -5,9 +5,9 @@ var request_data = {
 var Out2Eat;
 (function (Out2Eat) {
     var RestaurantService = (function () {
-        function RestaurantService($http, LoacateService) {
+        function RestaurantService($http, LocateService) {
             this.$http = $http;
-            this.LoacateService = LoacateService;
+            this.LocateService = LocateService;
         }
         RestaurantService.prototype.listRestaurants = function () {
             $.ajax({
