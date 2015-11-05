@@ -5,13 +5,6 @@
 * {
   background-color: #fcfae1;
 }
-img {
-  width: 160%;
-}
-.background {
-  position: absolute;
-  opacity: .04;
-}
 .swatch {
   width: 100%;
   margin: auto;
