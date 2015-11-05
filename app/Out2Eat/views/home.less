@@ -3,7 +3,29 @@
 }
 
 .container{
-	background-image: "../Images/TransparentChart.gif";
+    position: relative;
+    //background: #fcfae1;
+    overflow: hidden;
+}
+/* You could use :after - it doesn't really matter */
+.container:before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 80%;
+    z-index: 0;
+    opacity: 0.04;
+    background-image: url('../Images/TransparentChart.gif');
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;	
 }
 
 img{
@@ -63,9 +85,9 @@ img{
 
 h1{
 	font-family: Diner;
-	font-size: 6em;
+	font-size: 7em;
 	text-align: center;
-	margin: 5em .4em 0 0;
+	margin: .5em .4em 0 0;
 	clear: left;
 	color: #b9121b;
 }
@@ -97,6 +119,9 @@ button{
 	color: #4c1b1b;;
 	margin: 0 40% 0 40%;
 	font-family: Georgia;
-	font-size: 2em;
+	font-size: 1.6em;
 	border: 4px solid #bd8d48;
+	@media only screen and (max-width: 800px){
+		font-size: .8em;
+	}	
 }
