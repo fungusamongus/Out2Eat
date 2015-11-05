@@ -5,7 +5,7 @@ var Out2Eat;
         }
         LocateService.prototype.currentLocation = function () {
             navigator.geolocation.getCurrentPosition(function (position) {
-                console.log(position);
+                console.log(position.coords);
             });
         };
         LocateService.$inject = [];
