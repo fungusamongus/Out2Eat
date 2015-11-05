@@ -1,7 +1,5 @@
 <div class="row container">
-	<div class="background">
-		<img src="../Images/TransparentChart.gif" alt="">
-	</div>
+
 	<div class="swatch">
 		<div class="box-one"></div>
 		<div class="box-two"></div>
@@ -16,7 +14,9 @@
 		<h4>Pick a distance.</h4><h4>Press the button.</h4><h4>Try the Restaurant.</h4>
 	</div>
 	<p>(Here be a slider, arrrr)</p>
-	<div class="button-box">
-		<button ng-click="home.findFood()">Press Me for Adventure</button>
+	<div ng-click="home.findFood()" class="button-box">
+		<button >Press Me for Adventure</button>
 	</div>
+	
 </div>
+<button ng-click="home.findFood()">Click Me</button>
