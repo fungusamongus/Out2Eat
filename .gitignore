@@ -1,2 +1,4 @@
 node_modules
 typings
+.env
+.DS_Store

@@ -4,9 +4,11 @@
   "description": "Your description goes here",
   "version": "0.1.0",
   "dependencies": {
+    "express": "^4.13.3",
     "less": "latest",
     "oauth-1.0a": "^1.0.1",
-    "request": "^2.65.0"
+    "request": "^2.65.0",
+    "yelp": "^0.2.0"
   },
   "devDependencies": {
     "watchify": "latest",
