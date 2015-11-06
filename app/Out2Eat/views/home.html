@@ -14,9 +14,12 @@
 	</div>
 	<p>(Here be a slider, arrrr)</p>
 	<div id="slider">
-		<input class="bar" type="range" id="rangeinput" value="50" onchange="rangevalue.value=value"/>
+	  <form oninput="amount.value=rangeInput.value">
+		<input class="bar" type="range" id="rangeinput" name="rangeInput" min="0" max="100" step= "1" value="50" onchange="rangevalue.value=value"/>
 		<span class="highlight"></span>
 		<output id="rangevalue">50</output>
+		<output name="amount" for="rangeInput">50</output>
+	  </form>
 	</div>
 	<div  class="button-box">
 		<button ng-click="home.findFood()">Press Me for Adventure</button>
