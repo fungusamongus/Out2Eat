@@ -5,9 +5,9 @@ module Out2Eat {
 		}
 		//Web API call to find location
 		currentLocation(){
-			navigator.geolocation.getCurrentPosition(function(position: any){
-				console.log(position);
-			})
+				navigator.geolocation.getCurrentPosition(function(position: any){
+					console.log(position.coords);
+				})
 		}
 	}
 	angular

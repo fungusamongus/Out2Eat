@@ -1,10 +1,4 @@
 
-var request_data = {
-	url: 'http://localhost:1234/search?term=food&location=San+Francisco',
-	method: 'GET'
-}
-
-
 module Out2Eat{
 	export class RestaurantService{
 		static $inject =["$http", "LocateService"];
@@ -13,11 +7,20 @@ module Out2Eat{
 		}
 		//Call to Yelp API for restaurant data based on location
 		listRestaurants(){
-			$.ajax({
-				url: request_data.url,
-				type: request_data.method,
-			}).done(function(data) {
-				console.log(data);
+			navigator.geolocation.getCurrentPosition(function(position:any){
+				var myLat = (position.coords.latitude).toString();
+				var myLon = (position.coords.longitude).toString();
+				var url = 'http://localhost:1234/search?term=food&ll=' + myLat + ',' + myLon;
+				var method = 'GET'
+				console.log(myLat);
+				console.log(myLon);
+				console.log(url);	
+				$.ajax({
+					url: url,
+					type: method,
+				}).then(function(data) {
+					console.log(data);
+				})
 			})
 		}
 	}
