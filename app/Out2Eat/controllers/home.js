@@ -5,10 +5,6 @@ var Out2Eat;
             this.LocateService = LocateService;
             this.RestaurantService = RestaurantService;
         }
-        HomeController.prototype.findMe = function () {
-            console.log("clicked");
-            this.LocateService.currentLocation();
-        };
         HomeController.prototype.findFood = function () {
             console.log("clacked");
             this.RestaurantService.listRestaurants();

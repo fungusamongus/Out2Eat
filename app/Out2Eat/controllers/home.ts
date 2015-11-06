@@ -4,10 +4,6 @@ module Out2Eat {
 			constructor(private LocateService, private RestaurantService) {
 				
 			}
-			findMe(){
-				console.log("clicked");
-				this.LocateService.currentLocation();
-			}
 			findFood(){
 				console.log("clacked");
 				this.RestaurantService.listRestaurants();

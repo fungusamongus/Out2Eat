@@ -11,15 +11,12 @@ module Out2Eat{
 				var myLat = (position.coords.latitude).toString();
 				var myLon = (position.coords.longitude).toString();
 				var url = 'http://localhost:1234/search?term=food&ll=' + myLat + ',' + myLon;
-				var method = 'GET'
-				console.log(myLat);
-				console.log(myLon);
-				console.log(url);	
+				var method = 'GET'	
 				$.ajax({
 					url: url,
 					type: method,
 				}).then(function(data) {
-					console.log(data);
+					console.log(data.businesses);
 				})
 			})
 		}
