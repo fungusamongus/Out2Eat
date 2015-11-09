@@ -5,17 +5,34 @@ var Out2Eat;
             this.LocateService = LocateService;
             this.RestaurantService = RestaurantService;
             this.$q = $q;
+            this.foodList = [];
+            this.randomRestaurant = [];
         }
         HomeController.prototype.findFood = function () {
-            console.log("clacked");
+            var that = this;
+            var randomRestaurant = [];
+            var foodList = [];
             this.RestaurantService.listRestaurants().then(function (data) {
-                console.log(data);
+                for (var i = 0; i < data.length; i++) {
+                    var foodInfo = {
+                        name: '',
+                        rating_img_url: '',
+                        url: ''
+                    };
+                    foodInfo.name = data[i].name;
+                    foodInfo.rating_img_url = data[i].rating_img_url;
+                    foodInfo.url = data[i].url;
+                    foodList.push(foodInfo);
+                }
+                that.foodList = foodList;
+                console.log(that.foodList);
+                randomRestaurant.push(foodList[(Math.floor(Math.random() * that.foodList.length))]);
+                that.randomRestaurant = randomRestaurant;
+                console.log(that.randomRestaurant);
             });
         };
-        HomeController.prototype.findMe = function () {
-            this.LocateService.currentLocation().then(function (data) {
-                console.log(data.coords);
-            });
+        HomeController.prototype.listFood = function () {
+            console.log(this.randomRestaurant);
         };
         HomeController.$inject = ["LocateService", "RestaurantService", "$q"];
         return HomeController;

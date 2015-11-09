@@ -21,6 +21,10 @@
 		<input type="text" name="amount" for="rangeInput" value="50" style=" text-align: center; margin-left: 33%;"/>
 	  </form>
 	</div>
+	<div class="restaurant" data-ng-repeat="food in home.randomRestaurant">
+		<a href={{food.url}}>{{food.name}}</a>
+		<img src={{food.rating_img_url}} alt="">
+	</div>
 	<div  class="button-box">
 		<button ng-click="home.findFood()">Press Me for Adventure</button>
 	</div>

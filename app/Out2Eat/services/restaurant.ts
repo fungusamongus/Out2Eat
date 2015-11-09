@@ -11,13 +11,13 @@ module Out2Eat{
 			this.LocateService.currentLocation().then(function(position){
 				var myLat = (position.coords.latitude).toString();
 				var myLon = (position.coords.longitude).toString();
-				var url = 'http://localhost:1234/search?term=food&ll=' + myLat + ',' + myLon;
+				var url = 'http://localhost:1234/search?term=food&ll=' + myLat + ',' + myLon + '&sort=2&offset=20&limit=20';
 				var method = 'GET'	
 				$.ajax({
 						url: url,
 						type: method,
 					}).then(function(data){
-						return deferred.resolve(data);
+						return deferred.resolve(data.businesses);
 					})		
 			})
 			return deferred.promise;
