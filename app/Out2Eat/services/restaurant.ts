@@ -1,24 +1,26 @@
 
 module Out2Eat{
 	export class RestaurantService{
-		static $inject =["$http", "LocateService"];
-		constructor(private $http, private LocateService){
+		static $inject =["$q", "LocateService"];
+		constructor(private $q: ng.IQService, private LocateService){
 			
 		}
 		//Call to Yelp API for restaurant data based on location
 		listRestaurants(){
-			navigator.geolocation.getCurrentPosition(function(position:any){
+			var deferred = this.$q.defer();
+			this.LocateService.currentLocation().then(function(position){
 				var myLat = (position.coords.latitude).toString();
 				var myLon = (position.coords.longitude).toString();
 				var url = 'http://localhost:1234/search?term=food&ll=' + myLat + ',' + myLon;
 				var method = 'GET'	
 				$.ajax({
-					url: url,
-					type: method,
-				}).then(function(data) {
-					console.log(data.businesses);
-				})
+						url: url,
+						type: method,
+					}).then(function(data){
+						return deferred.resolve(data);
+					})		
 			})
+			return deferred.promise;
 		}
 	}
 	angular

@@ -1,14 +1,17 @@
 var Out2Eat;
 (function (Out2Eat) {
     var LocateService = (function () {
-        function LocateService() {
+        function LocateService($q) {
+            this.$q = $q;
         }
         LocateService.prototype.currentLocation = function () {
+            var deferred = this.$q.defer();
             navigator.geolocation.getCurrentPosition(function (position) {
-                console.log(position.coords);
+                return deferred.resolve(position);
             });
+            return deferred.promise;
         };
-        LocateService.$inject = [];
+        LocateService.$inject = ['$q'];
         return LocateService;
     })();
     Out2Eat.LocateService = LocateService;

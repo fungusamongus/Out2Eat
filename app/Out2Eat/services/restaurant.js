@@ -1,12 +1,13 @@
 var Out2Eat;
 (function (Out2Eat) {
     var RestaurantService = (function () {
-        function RestaurantService($http, LocateService) {
-            this.$http = $http;
+        function RestaurantService($q, LocateService) {
+            this.$q = $q;
             this.LocateService = LocateService;
         }
         RestaurantService.prototype.listRestaurants = function () {
-            navigator.geolocation.getCurrentPosition(function (position) {
+            var deferred = this.$q.defer();
+            this.LocateService.currentLocation().then(function (position) {
                 var myLat = (position.coords.latitude).toString();
                 var myLon = (position.coords.longitude).toString();
                 var url = 'http://localhost:1234/search?term=food&ll=' + myLat + ',' + myLon;
@@ -15,11 +16,12 @@ var Out2Eat;
                     url: url,
                     type: method,
                 }).then(function (data) {
-                    console.log(data.businesses);
+                    return deferred.resolve(data);
                 });
             });
+            return deferred.promise;
         };
-        RestaurantService.$inject = ["$http", "LocateService"];
+        RestaurantService.$inject = ["$q", "LocateService"];
         return RestaurantService;
     })();
     Out2Eat.RestaurantService = RestaurantService;

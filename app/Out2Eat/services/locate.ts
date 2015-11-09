@@ -1,13 +1,15 @@
 module Out2Eat {
 	export class LocateService {
-		static $inject = [];
-		constructor(){
+		static $inject = ['$q'];
+		constructor(private $q: ng.IQService){
 		}
 		//Web API call to find location
 		currentLocation(){
-				navigator.geolocation.getCurrentPosition(function(position: any){
-					console.log(position.coords);
-				})
+			var deferred = this.$q.defer();
+			navigator.geolocation.getCurrentPosition(function(position){
+				return deferred.resolve(position);
+			})
+			return deferred.promise;
 		}
 	}
 	angular
