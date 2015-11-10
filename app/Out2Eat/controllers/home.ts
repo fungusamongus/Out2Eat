@@ -4,6 +4,7 @@ module Out2Eat {
 			constructor(private LocateService, private RestaurantService, private $q: ng.IQService) {
 				
 			}
+			public rangeValue = 12;
 			private foodList = [];
 			private randomRestaurant = [];
 			

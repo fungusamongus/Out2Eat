@@ -14,16 +14,15 @@
 	</div>
 	<p>(Here be a slider, arrrr)</p>
 	  <form oninput="amount.value=rangeInput.value">
-		<input class="bar" type="range" id="rangeinput" name="rangeInput" min="0" max="25" step= "1" value="12" onchange="rangevalue.value=value"/>
+		<input class="bar" type="range" id="rangeinput" name="rangeInput" min="0" max="25" step= "1" ng-model="home.rangeValue" onchange="rangevalue.value=value"/>
 		<span class="highlight"></span>
-		<output id="rangevalue">12</output>
-		<input type="text" name="amount" for="rangeInput" value="12"/>
+		<output id="rangevalue" ng-model="home.rangeValue">{{home.rangeValue}}</output>
+		<input type="text" name="amount" for="rangeInput" ng-model="home.rangeValue"/>
 	  </form>
 	<div class="restaurant" data-ng-repeat="food in home.randomRestaurant">
 		<a href={{food.url}}>{{food.name}}</a>
 		<img src={{food.rating_img_url}} alt="">
 	</div>
-
 	<div  class="button-box">
 		<button ng-click="home.findFood()">Press Me for Adventure</button>
 	</div>
