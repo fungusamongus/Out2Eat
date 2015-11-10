@@ -8,8 +8,10 @@ var Out2Eat;
             this.rangeValue = 12;
             this.foodList = [];
             this.randomRestaurant = [];
+            this.loading = false;
         }
         HomeController.prototype.findFood = function () {
+            this.loading = true;
             var that = this;
             var randomRestaurant = [];
             var foodList = [];
@@ -29,10 +31,8 @@ var Out2Eat;
                 console.log(that.foodList);
                 randomRestaurant.push(foodList[(Math.floor(Math.random() * that.foodList.length))]);
                 that.randomRestaurant = randomRestaurant;
+                that.loading = false;
             });
-        };
-        HomeController.prototype.listFood = function () {
-            console.log(this.rangeValue);
         };
         HomeController.$inject = ["LocateService", "RestaurantService", "$q"];
         return HomeController;
