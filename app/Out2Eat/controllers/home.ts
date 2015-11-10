@@ -11,7 +11,7 @@ module Out2Eat {
 				var that = this;
 				var randomRestaurant = [];
 				var foodList = [];
-				this.RestaurantService.listRestaurants().then(function(data){
+				this.RestaurantService.listRestaurants(this.rangeValue).then(function(data){
 					for (var i = 0; i < data.length; i++) {
 						var foodInfo = {
 								name: '',
@@ -32,7 +32,7 @@ module Out2Eat {
 				
 			}
 			listFood(){
-				console.log(this.randomRestaurant);
+				console.log(this.rangeValue);
 			}
 	}
 	
