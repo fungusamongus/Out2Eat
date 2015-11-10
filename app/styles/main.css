@@ -8,6 +8,7 @@ html {
   background-image: url('../Images/TransparentChart2b.jpg');
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: 0 50%;
   overflow: hidden;
 }
 .container {
@@ -104,6 +105,9 @@ button:hover {
 form {
   margin: 3% 15% 0 15%;
   text-align: center;
+}
+.restaurant {
+  margin-top: 5%;
 }
 input[type="range"] {
   width: 100%;
