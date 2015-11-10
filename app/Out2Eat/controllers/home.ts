@@ -6,7 +6,6 @@ module Out2Eat {
 			}
 			private foodList = [];
 			private randomRestaurant = [];
-			
 			findFood(){
 				var that = this;
 				var randomRestaurant = [];
@@ -28,7 +27,6 @@ module Out2Eat {
 					console.log(that.foodList);
 					randomRestaurant.push(foodList[(Math.floor(Math.random() * that.foodList.length))]);
 					that.randomRestaurant = randomRestaurant;
-					console.log(that.randomRestaurant);
 				})
 				
 			}

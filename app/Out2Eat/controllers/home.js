@@ -28,7 +28,6 @@ var Out2Eat;
                 console.log(that.foodList);
                 randomRestaurant.push(foodList[(Math.floor(Math.random() * that.foodList.length))]);
                 that.randomRestaurant = randomRestaurant;
-                console.log(that.randomRestaurant);
             });
         };
         HomeController.prototype.listFood = function () {
