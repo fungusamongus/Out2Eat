@@ -20,7 +20,7 @@
 		<output id="rangevalue" ng-model="home.rangeValue">{{home.rangeValue}}</output>
 		<input type="text" name="amount" for="rangeInput" ng-model="home.rangeValue"/>
 		<div class="restaurant" data-ng-repeat="food in home.randomRestaurant">
-			<a href={{food.url}}>{{food.name}}</a>
+			<a href={{food.url}} target="_blank">{{food.name}}</a>
 			<img src={{food.rating_img_url}} alt="">
 		</div>	  
 	  </form>
