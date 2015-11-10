@@ -5,12 +5,14 @@ var Out2Eat;
             this.$q = $q;
             this.LocateService = LocateService;
         }
-        RestaurantService.prototype.listRestaurants = function () {
+        RestaurantService.prototype.listRestaurants = function (dist) {
             var deferred = this.$q.defer();
+            var meterRadius = Math.floor(dist * 1609.34);
             this.LocateService.currentLocation().then(function (position) {
                 var myLat = (position.coords.latitude).toString();
                 var myLon = (position.coords.longitude).toString();
-                var url = 'http://localhost:1234/search?term=food&ll=' + myLat + ',' + myLon + '&sort=2&offset=20&limit=20';
+                var radius = '&radius_filter=' + meterRadius.toString();
+                var url = 'http://localhost:1234/search?term=food&ll=' + myLat + ',' + myLon + '&sort=0&limit=20' + radius;
                 var method = 'GET';
                 $.ajax({
                     url: url,

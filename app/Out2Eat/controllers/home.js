@@ -13,7 +13,7 @@ var Out2Eat;
             var that = this;
             var randomRestaurant = [];
             var foodList = [];
-            this.RestaurantService.listRestaurants().then(function (data) {
+            this.RestaurantService.listRestaurants(this.rangeValue).then(function (data) {
                 for (var i = 0; i < data.length; i++) {
                     var foodInfo = {
                         name: '',
@@ -29,11 +29,10 @@ var Out2Eat;
                 console.log(that.foodList);
                 randomRestaurant.push(foodList[(Math.floor(Math.random() * that.foodList.length))]);
                 that.randomRestaurant = randomRestaurant;
-                console.log(that.randomRestaurant);
             });
         };
         HomeController.prototype.listFood = function () {
-            console.log(this.randomRestaurant);
+            console.log(this.rangeValue);
         };
         HomeController.$inject = ["LocateService", "RestaurantService", "$q"];
         return HomeController;

@@ -6,13 +6,15 @@ module Out2Eat{
 			
 		}
 		//Call to Yelp API for restaurant data based on location
-		listRestaurants(){
+		listRestaurants(dist?: number): ng.IPromise<{}>{
 			var deferred = this.$q.defer();
+			var meterRadius: number = Math.floor(dist * 1609.34)
 			this.LocateService.currentLocation().then(function(position){
-				var myLat = (position.coords.latitude).toString();
-				var myLon = (position.coords.longitude).toString();
-				var url = 'http://localhost:1234/search?term=food&ll=' + myLat + ',' + myLon + '&sort=2&offset=20&limit=20';
-				var method = 'GET'	
+				var myLat: string = (position.coords.latitude).toString();
+				var myLon: string = (position.coords.longitude).toString();
+				var radius: string = '&radius_filter=' + meterRadius.toString();
+				var url: string = 'http://localhost:1234/search?term=food&ll=' + myLat + ',' + myLon  +'&sort=0&limit=20' + radius;
+				var method: string = 'GET'	
 				$.ajax({
 						url: url,
 						type: method,
