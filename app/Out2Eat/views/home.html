@@ -13,7 +13,7 @@
 	<div class="jabber-box">
 		<h4>Pick a distance.</h4><h4>Press the button.</h4><h4>Try the Restaurant.</h4>
 	</div>
-	<p>(Here be a slider, arrrr)</p>
+	<p>Miles Away:</p>
 	  <form oninput="amount.value=rangeInput.value">
 		<input class="bar" type="range" id="rangeinput" name="rangeInput" min="0" max="25" step= "1" ng-model="home.rangeValue" onchange="rangevalue.value=value"/>
 		<span class="highlight"></span>
@@ -24,6 +24,19 @@
 			<img src={{food.rating_img_url}} alt="">
 		</div>	  
 	  </form>
+	  <!--animated cube code below-->
+		<div class="sk-spinner sk-spinner-cube-grid">
+			<div class="sk-cube"></div>
+			<div class="sk-cube"></div>
+			<div class="sk-cube"></div>
+			<div class="sk-cube"></div>
+			<div class="sk-cube"></div>
+			<div class="sk-cube"></div>
+			<div class="sk-cube"></div>
+			<div class="sk-cube"></div>
+			<div class="sk-cube"></div>
+		</div>
+		<!--animated cube code above-->
 	<div  class="button-box">
 		<button ng-click="home.findFood()">Press Me for Adventure</button>
 	</div>
