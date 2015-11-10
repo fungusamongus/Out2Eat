@@ -6,7 +6,7 @@ module Out2Eat{
 			
 		}
 		//Call to Yelp API for restaurant data based on location
-		listRestaurants(){
+		listRestaurants(): ng.IPromise<{}>{
 			var deferred = this.$q.defer();
 			this.LocateService.currentLocation().then(function(position){
 				var myLat = (position.coords.latitude).toString();
