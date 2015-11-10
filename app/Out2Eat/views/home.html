@@ -1,4 +1,5 @@
 <div class="container">
+<<<<<<< HEAD
 	<div class="swatch">
 		<div class="box-one"></div>
 		<div class="box-two"></div>
@@ -27,6 +28,38 @@
 		<button ng-click="home.findFood()">Press Me for Adventure</button>
 	</div>
 	<br >
+=======
+   <div class="content">
+		<div class="swatch">
+			<div class="box-one"></div>
+			<div class="box-two"></div>
+			<div class="box-three"></div>
+			<div class="box-four"></div>
+			<div class="box-five"></div>
+		</div>
+		<div class="title-box">
+			<h1>Take a Chance!</h1>
+		</div>
+		<div class="jabber-box">
+			<h4>Pick a distance.</h4><h4>Press the button.</h4><h4>Try the Restaurant.</h4>
+		</div>
+		<p>(Here be a slider, arrrr)</p>
+		<form oninput="amount.value=rangeInput.value">
+			<input class="bar" type="range" id="rangeinput" name="rangeInput" min="0" max="25" step= "1" value="12" onchange="rangevalue.value=value"/>
+			<span class="highlight"></span>
+			<output id="rangevalue">12</output>
+			<input type="text" name="amount" for="rangeInput" value="12"/>
+		<div class="restaurant" data-ng-repeat="food in home.randomRestaurant">
+			<a href={{food.url}}>{{food.name}}</a>
+			<img src={{food.rating_img_url}} alt="">
+		</div>
+		</form>
+		<div  class="button-box">
+			<button ng-click="home.findFood()">Press Me for Adventure</button>
+		</div>
+		<br >
+  </div>
+>>>>>>> 66bbdd95b8600f4006e6a7ff31d8132d93992b31
 </div>
 
 
