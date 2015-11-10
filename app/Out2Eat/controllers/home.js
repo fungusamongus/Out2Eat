@@ -5,6 +5,7 @@ var Out2Eat;
             this.LocateService = LocateService;
             this.RestaurantService = RestaurantService;
             this.$q = $q;
+            this.offsetValue = 0;
             this.rangeValue = 12;
             this.foodList = [];
             this.randomRestaurant = [];
