@@ -7,9 +7,6 @@
 		<div class="box-four"></div>
 		<div class="box-five"></div>
 	</div>
-<!--<div class="widget">
-  <div class="doodad rotate"></div>
-</div>-->
 	<div class="title-box">
 		<h1>Take a Chance!</h1>
 	</div>
@@ -17,15 +14,9 @@
 		<h4>Pick a distance.</h4><h4>Press the button.</h4><h4>Try the Restaurant.</h4>
 	</div>
 	  <form oninput="amount.value=rangeInput.value">
-		<input class="bar" type="range" id="rangeinput" name="rangeInput" min="1" max="25" step= "1" ng-model="home.rangeValue" onchange="rangevalue.value=value"/>
+		<input class="bar" type="range" id="rangeinput" name="rangeInput" min="0" max="25" step= "1" ng-model="home.rangeValue" onchange="rangevalue.value=value"/>
 		<span class="highlight"></span>
 		<output id="rangevalue" ng-model="home.rangeValue">{{home.rangeValue}}</output>
-<<<<<<< HEAD
-		<input type="text" name="amount" for="rangeInput" ng-model="home.rangeValue"/>
-		<div class="restaurant" data-ng-repeat="food in home.randomRestaurant">
-			<a href={{food.url}} target="_blank">{{food.name}}</a>
-			<img src={{food.rating_img_url}} alt="">
-=======
 		<label for="miles-away">Miles Away:</label>
 		<input class="miles-away" type="text" name="amount" for="rangeInput" ng-model="home.rangeValue"/>
 		<label for="vegetarian-option">Vegetarian</label>
@@ -33,7 +24,6 @@
 		<div class="restaurant" data-ng-repeat="food in home.randomRestaurant">
 			<a href="{{food.url}}" target="_blank">{{food.name}}</a>
 			<img src="{{food.rating_img_url}}" alt="Yelp rating stars">
->>>>>>> ff6bbf2edb94821cb82c0a5284872b6544bfdd94
 			<br >
 			<img src="../Images/powered_by_yelp.png" alt="yelp brand image">
 		</div>	  
