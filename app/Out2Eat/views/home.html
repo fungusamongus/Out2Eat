@@ -17,9 +17,9 @@
 		<input class="bar" type="range" id="rangeinput" name="rangeInput" min="0" max="25" step= "1" ng-model="home.rangeValue" onchange="rangevalue.value=value"/>
 		<span class="highlight"></span>
 		<output id="rangevalue" ng-model="home.rangeValue">{{home.rangeValue}}</output>
-		<label for="miles-away">Miles Away:</label>
+		<label for="miles-away"><h4>Miles Away:</h4></label>
 		<input class="miles-away" type="text" name="amount" for="rangeInput" ng-model="home.rangeValue"/>
-		<label for="vegetarian-option">Vegetarian</label>
+		<label for="vegetarian-option"><h4>Vegetarian</h4></label>
 		<input type="checkbox" class="vegetarian-option" ng-model="home.vegetarian">
 		<div class="restaurant" data-ng-repeat="food in home.randomRestaurant">
 			<a href="{{food.url}}" target="_blank">{{food.name}}</a>
@@ -45,5 +45,5 @@
 		<button ng-click="home.findFood()">Press Me for Adventure</button>
 	</div>
 	<br >
-</div>ss="spacer"></div>
+ 	<div class="spacer"></div>
 </div>
