@@ -21,7 +21,7 @@
 		<input class="miles-away" type="text" name="amount" for="rangeInput" ng-model="home.rangeValue"/>
 		<label for="vegetarian-option"><h4>Vegetarian</h4></label>
 		<input type="checkbox" class="vegetarian-option" ng-model="home.vegetarian">
-		<div class="restaurant" data-ng-repeat="food in home.randomRestaurant">
+		<div class="restaurant animated flipInX" data-ng-repeat="food in home.randomRestaurant">
 			<a href="{{food.url}}" target="_blank">{{food.name}}</a>
 			<img src="{{food.rating_img_url}}" alt="Yelp rating stars">
 			<br >
@@ -29,7 +29,7 @@
 		</div>	  
 	  </form>
 	  <!--animated cube code below-->
-		<div ng-show="home.loading" class="sk-spinner sk-spinner-cube-grid">
+		<div ng-show="home.loading" class="sk-spinner sk-spinner-cube-grid animated fadeIn">
 			<div class="sk-cube"></div>
 			<div class="sk-cube"></div>
 			<div class="sk-cube"></div>
@@ -41,7 +41,7 @@
 			<div class="sk-cube"></div>
 		</div>
 		<!--animated cube code above-->
-	<div ng-show="!home.loading" class="button-box">
+	<div ng-show="!home.loading" class="button-box animated flipInX">
 		<button ng-click="home.findFood()">Press Me for Adventure</button>
 	</div>
 	<br >
