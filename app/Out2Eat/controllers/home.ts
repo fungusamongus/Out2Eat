@@ -4,10 +4,13 @@ module Out2Eat {
 			constructor(private LocateService, private RestaurantService, private $q: ng.IQService) {
 				
 			}
+			public offsetValue = 0;
 			public rangeValue = 12;
 			private foodList = [];
 			private randomRestaurant = [];
+			private loading: boolean = false;
 			findFood(){
+				this.loading = true;
 				var that = this;
 				var randomRestaurant = [];
 				var foodList = [];
@@ -28,11 +31,9 @@ module Out2Eat {
 					console.log(that.foodList);
 					randomRestaurant.push(foodList[(Math.floor(Math.random() * that.foodList.length))]);
 					that.randomRestaurant = randomRestaurant;
+					that.loading = false;
 				})
 				
-			}
-			listFood(){
-				console.log(this.rangeValue);
 			}
 	}
 	

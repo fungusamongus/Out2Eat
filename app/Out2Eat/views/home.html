@@ -27,7 +27,7 @@
 		</div>	  
 	  </form>
 	  <!--animated cube code below-->
-		<div class="sk-spinner sk-spinner-cube-grid">
+		<div ng-show="home.loading" class="sk-spinner sk-spinner-cube-grid">
 			<div class="sk-cube"></div>
 			<div class="sk-cube"></div>
 			<div class="sk-cube"></div>
@@ -39,7 +39,7 @@
 			<div class="sk-cube"></div>
 		</div>
 		<!--animated cube code above-->
-	<div  class="button-box">
+	<div ng-show="!home.loading" class="button-box">
 		<button ng-click="home.findFood()">Press Me for Adventure</button>
 	</div>
 	<br >
