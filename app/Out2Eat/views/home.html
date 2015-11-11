@@ -14,7 +14,7 @@
 		<h4>Pick a distance.</h4><h4>Press the button.</h4><h4>Try the Restaurant.</h4>
 	</div>
 	  <form oninput="amount.value=rangeInput.value">
-		<input class="bar" type="range" id="rangeinput" name="rangeInput" min="0" max="25" step= "1" ng-model="home.rangeValue" onchange="rangevalue.value=value"/>
+		<input class="bar" type="range" id="rangeinput" name="rangeInput" min="1" max="25" step= "1" ng-model="home.rangeValue" onchange="rangevalue.value=value"/>
 		<span class="highlight"></span>
 		<output id="rangevalue" ng-model="home.rangeValue">{{home.rangeValue}}</output>
 		<label for="miles-away"><h4>Miles Away:</h4></label>
