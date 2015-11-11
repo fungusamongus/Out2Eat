@@ -7,7 +7,6 @@
 		<div class="box-four"></div>
 		<div class="box-five"></div>
 	</div>
-
 	<div class="title-box">
 		<h1>Take a Chance!</h1>
 	</div>
@@ -15,12 +14,12 @@
 		<h4>Pick a distance.</h4><h4>Press the button.</h4><h4>Try the Restaurant.</h4>
 	</div>
 	  <form oninput="amount.value=rangeInput.value">
-		<input class="bar" type="range" id="rangeinput" name="rangeInput" min="1" max="25" step= "1" ng-model="home.rangeValue" onchange="rangevalue.value=value"/>
+		<input class="bar" type="range" id="rangeinput" name="rangeInput" min="0" max="25" step= "1" ng-model="home.rangeValue" onchange="rangevalue.value=value"/>
 		<span class="highlight"></span>
 		<output id="rangevalue" ng-model="home.rangeValue">{{home.rangeValue}}</output>
-		<label for="miles-away"><h4>Miles Away:</h4></label>
+		<label for="miles-away">Miles Away:</label>
 		<input class="miles-away" type="text" name="amount" for="rangeInput" ng-model="home.rangeValue"/>
-		<label for="vegetarian-option"><h4>Vegetarian?</h4></label>
+		<label for="vegetarian-option">Vegetarian</label>
 		<input type="checkbox" class="vegetarian-option" ng-model="home.vegetarian">
 		<div class="restaurant" data-ng-repeat="food in home.randomRestaurant">
 			<a href="{{food.url}}" target="_blank">{{food.name}}</a>
@@ -45,5 +44,6 @@
 	<div ng-show="!home.loading" class="button-box">
 		<button ng-click="home.findFood()">Press Me for Adventure</button>
 	</div>
-	<div class="spacer"></div>
+	<br >
+</div>ss="spacer"></div>
 </div>
