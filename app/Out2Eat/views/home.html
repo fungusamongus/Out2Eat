@@ -17,6 +17,7 @@
 		<input class="bar" type="range" id="rangeinput" name="rangeInput" min="0" max="25" step= "1" ng-model="home.rangeValue" onchange="rangevalue.value=value"/>
 		<span class="highlight"></span>
 		<output id="rangevalue" ng-model="home.rangeValue">{{home.rangeValue}}</output>
+
 		<label for="miles-away">Miles Away:</label>
 		<input class="miles-away" type="text" name="amount" for="rangeInput" ng-model="home.rangeValue"/>
 		<label for="vegetarian-option">Vegetarian</label>
@@ -24,6 +25,10 @@
 		<div class="restaurant" data-ng-repeat="food in home.randomRestaurant">
 			<a href="{{food.url}}" target="_blank">{{food.name}}</a>
 			<img src="{{food.rating_img_url}}" alt="Yelp rating stars">
+		<input type="text" name="amount" for="rangeInput" ng-model="home.rangeValue"/>
+		<div class="restaurant bounceInLeft" data-ng-repeat="food in home.randomRestaurant">
+			<a href={{food.url}} target="_blank">{{food.name}}</a>
+			<img src={{food.rating_img_url}} alt="">
 			<br >
 			<img src="../Images/powered_by_yelp.png" alt="yelp brand image">
 		</div>	  
