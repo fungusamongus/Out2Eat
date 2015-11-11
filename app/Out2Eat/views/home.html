@@ -7,9 +7,7 @@
 		<div class="box-four"></div>
 		<div class="box-five"></div>
 	</div>
-<!--<div class="widget">
-  <div class="doodad rotate"></div>
-</div>-->
+
 	<div class="title-box">
 		<h1>Take a Chance!</h1>
 	</div>
@@ -20,20 +18,13 @@
 		<input class="bar" type="range" id="rangeinput" name="rangeInput" min="1" max="25" step= "1" ng-model="home.rangeValue" onchange="rangevalue.value=value"/>
 		<span class="highlight"></span>
 		<output id="rangevalue" ng-model="home.rangeValue">{{home.rangeValue}}</output>
-<<<<<<< HEAD
-		<input type="text" name="amount" for="rangeInput" ng-model="home.rangeValue"/>
-		<div class="restaurant" data-ng-repeat="food in home.randomRestaurant">
-			<a href={{food.url}} target="_blank">{{food.name}}</a>
-			<img src={{food.rating_img_url}} alt="">
-=======
-		<label for="miles-away">Miles Away:</label>
+		<label for="miles-away"><h4>Miles Away:</h4></label>
 		<input class="miles-away" type="text" name="amount" for="rangeInput" ng-model="home.rangeValue"/>
-		<label for="vegetarian-option">Vegetarian</label>
+		<label for="vegetarian-option"><h4>Vegetarian?</h4></label>
 		<input type="checkbox" class="vegetarian-option" ng-model="home.vegetarian">
 		<div class="restaurant" data-ng-repeat="food in home.randomRestaurant">
 			<a href="{{food.url}}" target="_blank">{{food.name}}</a>
 			<img src="{{food.rating_img_url}}" alt="Yelp rating stars">
->>>>>>> ff6bbf2edb94821cb82c0a5284872b6544bfdd94
 			<br >
 			<img src="../Images/powered_by_yelp.png" alt="yelp brand image">
 		</div>	  
@@ -54,5 +45,5 @@
 	<div ng-show="!home.loading" class="button-box">
 		<button ng-click="home.findFood()">Press Me for Adventure</button>
 	</div>
-	<br >
+	<div class="spacer"></div>
 </div>
