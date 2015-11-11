@@ -5,6 +5,7 @@ var Out2Eat;
             this.LocateService = LocateService;
             this.RestaurantService = RestaurantService;
             this.$q = $q;
+            this.vegetarian = false;
             this.offsetValue = 0;
             this.rangeValue = 12;
             this.foodList = [];
@@ -16,7 +17,7 @@ var Out2Eat;
             var that = this;
             var randomRestaurant = [];
             var foodList = [];
-            this.RestaurantService.listRestaurants(this.rangeValue).then(function (data) {
+            this.RestaurantService.listRestaurants(this.rangeValue, this.vegetarian).then(function (data) {
                 for (var i = 0; i < data.length; i++) {
                     var foodInfo = {
                         name: '',
