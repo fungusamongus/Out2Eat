@@ -14,7 +14,7 @@ var Out2Eat;
                 var radius = '&radius_filter=' + meterRadius.toString();
                 var url = '';
                 if (veg) {
-                    var url = 'http://localhost:1234/search?term=food&ll=' + myLat + ',' + myLon + '&sort=0&limit=20' + radius + '&category_filter=vegetarian';
+                    var url = 'http://localhost:1234/search?term=food&ll=' + myLat + ',' + myLon + '&sort=1&limit=20' + radius + '&category_filter=vegetarian';
                 }
                 else {
                     var url = 'http://localhost:1234/search?term=food&ll=' + myLat + ',' + myLon + '&sort=0&limit=20' + radius;
