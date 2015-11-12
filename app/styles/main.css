@@ -60,7 +60,7 @@ html {
 }
 h1 {
   font-family: Diner;
-  font-size: 7em;
+  font-size: 10vw;
   font-weight: 900;
   text-align: center;
   margin: .5em .4em 0 0;
@@ -69,14 +69,14 @@ h1 {
 }
 h4 {
   font-family: Georgia;
-  font-size: 2em;
+  font-size: 4vw;
   text-align: center;
-  margin: .2em 0 .3em 0;
+  margin: .2em 0 0 0;
   color: #4c1b1b;
 }
 p {
   text-align: center;
-  font-size: 2em;
+  font-size: 4vw;
   color: red;
 }
 .restaurant {
@@ -94,13 +94,13 @@ button {
   color: #4c1b1b;
   margin: 0 40% 0 40%;
   font-family: Georgia;
-  font-size: 100%;
+  font-size: 3vw;
   border: 4px solid #bd8d48;
   transition: all .4s ease;
 }
 @media only screen and (max-width: 800px) {
   button {
-    font-size: .8em;
+    font-size: 2.5vw;
   }
 }
 button:hover {
@@ -109,7 +109,8 @@ button:hover {
   transform: scale(1.1);
 }
 form {
-  margin: 3% 15% 0 15%;
+  width: 60%;
+  margin: 3% 20% 0 20%;
   text-align: center;
 }
 .restaurant {
@@ -148,12 +149,12 @@ input[type="range"]:active ~ #rangevalue {
 /* Tool Tip */
 #rangevalue {
   color: white;
-  font-size: 10px;
+  font-size: 2vw;
   text-align: center;
   font-family: Arial, sans-serif;
   display: block;
   color: #fff;
-  margin: 20px 0;
+  margin: 10px 0;
   position: relative;
   left: 44.5%;
   padding: 6px 6px;
