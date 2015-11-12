@@ -1,12 +1,4 @@
 <div class="container">
-
-	<div class="swatch">
-		<div class="box-one"></div>
-		<div class="box-two"></div>
-		<div class="box-three"></div>
-		<div class="box-four"></div>
-		<div class="box-five"></div>
-	</div>
 	<div class="title-box">
 		<h1>Take a Chance!</h1>
 	</div>
@@ -20,7 +12,7 @@
 		<label for="miles-away"><h4>Miles Away:</h4></label>
 		<input class="miles-away" type="text" name="amount" for="rangeInput" ng-model="home.rangeValue"/>
 		<div>
-		<label for="vegetarian-option"><h4>Vegetarian?</h4></label>
+		<label for="vegetarian-option"><h4>Vegetarian:</h4></label>
 		<input type="checkbox" class="vegetarian-option" ng-model="home.vegetarian">
 		</div>
 		<div class="restaurant animated flipInX" data-ng-repeat="food in home.randomRestaurant">
@@ -47,5 +39,4 @@
 		<button ng-click="home.findFood()">Press Me for Adventure</button>
 	</div>
 	<br >
- 	<div class="spacer"></div>
 </div>
