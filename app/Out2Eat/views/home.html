@@ -9,11 +9,11 @@
 		<input class="bar" type="range" id="rangeinput" name="rangeInput" min="1" max="25" step= "1" ng-model="home.rangeValue" onchange="rangevalue.value=value"/>
 		<span class="highlight"></span>
 		<output id="rangevalue" ng-model="home.rangeValue">{{home.rangeValue}}</output>
-		<label for="miles-away"><h4>Miles Away:</h4></label>
+		<label for="miles-away"><h5>Miles Away:</h5></label>
 		<input class="miles-away" type="text" name="amount" for="rangeInput" ng-model="home.rangeValue"/>
 		<div>
-			<label for="vegetarian-option"><h4>Vegetarian:</h4></label>
-			<input class="vegetarian-option" type="checkbox" ng-model="home.vegetarian">
+		<label for="vegetarian-option"><h5>Vegetarian:</h5></label>
+		<input type="checkbox" class="vegetarian-option" ng-model="home.vegetarian">
 		</div>
 		<div class="restaurant animated flipInX" data-ng-repeat="food in home.randomRestaurant">
 			<a href="{{food.url}}" target="_blank">{{food.name}}</a>
