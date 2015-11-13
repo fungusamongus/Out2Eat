@@ -13,6 +13,9 @@ var Out2Eat;
             this.loading = false;
         }
         HomeController.prototype.findFood = function () {
+            this.LocateService.currentLocation().then(function (data) {
+                console.log(data);
+            });
             this.loading = true;
             var that = this;
             var randomRestaurant = [];

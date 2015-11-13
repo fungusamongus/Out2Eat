@@ -11,6 +11,9 @@ module Out2Eat {
 			private randomRestaurant = [];
 			private loading: boolean = false;
 			findFood(){
+				this.LocateService.currentLocation().then(function(data){
+					console.log(data);
+				})
 				this.loading = true;
 				var that = this;
 				var randomRestaurant = [];
