@@ -5,16 +5,23 @@ var Out2Eat;
             this.LocateService = LocateService;
             this.RestaurantService = RestaurantService;
             this.$q = $q;
+            this.buttonText = "Press Me for Adventure";
             this.vegetarian = false;
-            this.offsetValue = 0;
             this.rangeValue = 12;
             this.foodList = [];
             this.randomRestaurant = [];
             this.loading = false;
+            this.myLon = '';
+            this.myLat = '';
+            this.foodLat = '';
+            this.foodLon = '';
         }
         HomeController.prototype.findFood = function () {
             this.LocateService.currentLocation().then(function (data) {
-                console.log(data);
+                var myLat = data.coords.latitude;
+                var myLon = data.coords.longitude;
+                this.myLon = myLon.toString();
+                this.myLat = myLat.toString();
             });
             this.loading = true;
             var that = this;
@@ -25,18 +32,24 @@ var Out2Eat;
                     var foodInfo = {
                         name: '',
                         rating_img_url: '',
-                        url: ''
+                        url: '',
+                        latitude: '',
+                        longitude: ''
                     };
                     foodInfo.name = data[i].name;
                     foodInfo.rating_img_url = data[i].rating_img_url;
                     foodInfo.url = data[i].url;
+                    foodInfo.latitude = data[i].location.coordinate.latitude;
+                    foodInfo.longitude = data[i].location.coordinate.longitude;
                     foodList.push(foodInfo);
                 }
                 that.foodList = foodList;
-                console.log(that.foodList);
                 randomRestaurant.push(foodList[(Math.floor(Math.random() * that.foodList.length))]);
                 that.randomRestaurant = randomRestaurant;
+                that.foodLat = (randomRestaurant[0].latitude).toString();
+                that.foodLon = (randomRestaurant[0].longitude).toString();
                 that.loading = false;
+                that.buttonText = "Try Again";
             });
         };
         HomeController.$inject = ["LocateService", "RestaurantService", "$q"];
